@@ -16,7 +16,25 @@ package Algorithms1;
 public class Lesson2Launcher {
 
     public static void main(String[] args) {
+
         MyArray myArray = new MyArray(1000000);
+        System.out.println("Текущий размер массива=" + myArray.getSize());
+        myArray.insert(99999);
+        myArray.delete(9);
+        System.out.println("Текущий размер массива=" + myArray.getSize());
+        int find_element = 99999;
+        System.out.println("Результат поиска элемента=" + find_element + ": " + myArray.find(find_element));
+        myArray.insert(find_element);
+        System.out.println("Текущий размер массива=" + myArray.getSize());
+        System.out.println("Результат поиска элемента=" + find_element + ": " + myArray.find(find_element));
+
+        MyArray myArray2 = new MyArray(100000);
+        System.out.print("Выполняем сортировку массива методом выбора...");
+        myArray2.sortSelect();
+
+        MyArray myArray3 = new MyArray(100000);
+        System.out.print("Выполняем сортировку массива методом пузырька...");
+        myArray3.sortBubble();
 
     }
 }
