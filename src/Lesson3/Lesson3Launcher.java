@@ -57,6 +57,35 @@ public class Lesson3Launcher {
         System.out.println(queue.toString());
 
 
+
+        Deque deque = new Deque(5);
+        System.out.println("\nInserLeft to deque 3 elements.");
+        deque.insertLeft("A");
+        deque.insertLeft("B");
+        deque.insertLeft("C");
+        System.out.println(deque.toString());
+        System.out.println("InserRight to deque 3 elements.");
+        deque.insertRight("1");
+        deque.insertRight("2");
+        deque.insertRight("3");
+        System.out.println(deque.toString());
+        System.out.println("removeLeft from deque: " + deque.removeLeft());
+        System.out.println("removeRight from deque: " + deque.removeRight());
+        System.out.println("Insert Left to queue 1 element: X.");
+        deque.insertLeft("X");
+        System.out.println("Insert Right to queue 1 element: Y.");
+        deque.insertRight("Y");
+        System.out.println(deque.toString());
+        System.out.println("removeLeft from deque: " + deque.removeLeft());
+        System.out.println("removeLeft from deque: " + deque.removeLeft());
+        System.out.println("removeRight from deque: " + deque.removeRight());
+        System.out.println("removeRight from deque: " + deque.removeRight());
+        System.out.println(deque.toString());
+
+
+
+
+
         PriorityQueue priorityQueue = new PriorityQueue(5);
         System.out.println("\nPush to priorityQueue 6 elements.");
         priorityQueue.push(9);
