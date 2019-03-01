@@ -13,7 +13,7 @@ import java.io.InputStreamReader;
 
 public class TurnOverInputString {
 
-    private String getStr() throws IOException {
+    private String getStr()  throws IOException {
         InputStreamReader isr = new InputStreamReader(System.in);
         BufferedReader br = new BufferedReader(isr);
         return br.readLine();
@@ -24,7 +24,6 @@ public class TurnOverInputString {
         String inputString = this.getStr();
         String outputString = "";
         int inputStringLength = inputString.length();
-        System.out.println("inputStringLength=" + inputStringLength);
 
         if (inputStringLength == 0) return outputString;
 
