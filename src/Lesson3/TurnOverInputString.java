@@ -21,15 +21,24 @@ public class TurnOverInputString {
 
     // Переворачиваем строку
     public String turnOver() throws IOException {
-        String input = this.getStr();
-        char[] inputToCharArray = input.toCharArray();
-        char[] resultToCharArray = new char[inputToCharArray.length];
+        String inputString = this.getStr();
+        String outputString = "";
+        int inputStringLength = inputString.length();
+        System.out.println("inputStringLength=" + inputStringLength);
 
-        for (int i= inputToCharArray.length-1, j=0; i>=0; i--, j++) {
-            resultToCharArray[j] = inputToCharArray[i];
+        if (inputStringLength == 0) return outputString;
+
+        Stack stack = new Stack(inputStringLength);
+
+        for (String s : inputString.split("")) {
+            stack.push(s);
         }
 
-        return new String(resultToCharArray);
+        for(int i = 0; i < inputStringLength; i++) {
+            outputString += stack.pop();
+        }
+
+        return outputString;
     }
 
 
