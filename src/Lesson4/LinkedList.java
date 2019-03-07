@@ -26,6 +26,7 @@ public class LinkedList {
             current.print();
             current = current.next;
         }
+        System.out.println("---------------------------------------");
     }
 
     public boolean isEmpty() {
