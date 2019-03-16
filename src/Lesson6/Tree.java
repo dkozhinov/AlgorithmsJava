@@ -95,6 +95,7 @@ public class Tree {
 
     }
 
+    //обход узлов в отсортированном порядке
     private void roundTreeLeftToRight(Node node){
         if ( node != null ){
             roundTreeLeftToRight( node.getLeftChild());
@@ -103,11 +104,12 @@ public class Tree {
         }
     }
 
+    // обход узлов в порядке: вершина, левое поддерево, правое поддерево
     private void roundTreeUpToDown(Node node){
         if ( node != null ){
             node.display();
-            roundTreeLeftToRight( node.getLeftChild());
-            roundTreeLeftToRight( node.getRightChild());
+            roundTreeUpToDown( node.getLeftChild());
+            roundTreeUpToDown( node.getRightChild());
         }
     }
 
