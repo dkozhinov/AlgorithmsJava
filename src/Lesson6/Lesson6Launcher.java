@@ -1,15 +1,18 @@
-package Lesson5;
+package Lesson6;
+
 
 /**
- * Java. Algorithms. Lesson 5. Homework.
+ * Java. Algorithms. Lesson 6. Homework.
  *
  * @author Dmitry Kozhinov d.kozhinov@mail.ru
- * Created on 14.03.2019
+ * Created on 16.03.2019
  */
 
-public class Lesson5Launcher {
+public class Lesson6Launcher {
+
     public static void main(String[] args) {
-        System.out.println("4^3=" + Exponentiation.run(4,3));
-        System.out.println("2^8=" + Exponentiation.run(2,8));
+        Tree tree = new Tree(4);
+        tree.showTree();
     }
+
 }
