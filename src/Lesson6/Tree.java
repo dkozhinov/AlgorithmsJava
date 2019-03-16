@@ -17,7 +17,7 @@ public class Tree {
     private int allowedLevel;
     // Максимально возможное число ошибок при вставке элемента в дерево, при заданной разрешенной глубине
     // учитывается при вставке элемента когда высота дерева превышает разрешенную (allowedLevel)
-    private final int ALLOWED_INSERT_ERROR = 3;
+    private final int ALLOWED_INSERT_ERROR = 9;
     private boolean balancedTree;
 
 
@@ -146,8 +146,8 @@ public class Tree {
     // Вычисление баланса конкретного узла
     private int getBalanceInNode(Node node)
     {
-        int balance =   ((node.getRightChild()!=null) ? node.getRightChild().getHeight() : 0) -
-                        ((node.getLeftChild() !=null) ? node.getLeftChild().getHeight()  : 0);
+        int balance =   ((node.getRightChild()!=null) ? node.getRightChild().getHeight() : -1) -
+                        ((node.getLeftChild() !=null) ? node.getLeftChild().getHeight()  : -1);
         if (balance < -1 || balance > 1) {
             balancedTree = false;
         }
