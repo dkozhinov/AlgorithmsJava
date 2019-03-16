@@ -9,7 +9,9 @@ package Lesson6;
 
 public class Node {
     private int key;
-    private int level; //  Номер уровня узла
+    private int level;   // Номер уровня узла
+    private int height;  // Высота дерева в узле
+    private int balance; // Баланс в узле
     private Node leftChild;
     private Node rightChild;
 
@@ -35,6 +37,22 @@ public class Node {
         this.level = level;
     }
 
+    public int getHeight() {
+        return height;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
+    public int getBalance() {
+        return balance;
+    }
+
+    public void setBalance(int balance) {
+        this.balance = balance;
+    }
+
     public Node getLeftChild() {
         return leftChild;
     }
@@ -52,6 +70,7 @@ public class Node {
     }
 
     public void display (){
-        System.out.println ("Key: " + this.key + "(level=" + this.level + ")");
+        System.out.println ("Key: " + this.key + " (level=" + this.level + ")" + " (height=" + this.height + ")"
+                            + " (balance=" + this.balance + ")");
     }
 }
