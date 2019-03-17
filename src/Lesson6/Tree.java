@@ -67,13 +67,16 @@ public class Tree {
                 } else {
                     current = current.getLeftChild();
                 }
-            } else {
+            } else if ( key > current.getKey() ) {
                 if (current.getRightChild() == null){
                     current.setRightChild(node);
                     return true;
                 } else {
                     current = current.getRightChild();
                 }
+            } else {
+                // Случай когда ключ уже существует в дереве
+                return false;
             }
 
         }
